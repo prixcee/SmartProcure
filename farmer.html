@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Dashboard | SmartProcure</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+<header class="dashboard-nav">
+
+    <div class="logo">🌾 SmartProcure</div>
+
+    <nav>
+        <a href="farmer.html">Dashboard</a>
+        <a href="centre.html">Centres</a>
+        <a href="booking.html">Book Slot</a>
+        <a href="tracking.html">Track</a>
+        <a href="index.html">Logout</a>
+    </nav>
+
+</header>
+
+
+<main class="dashboard">
+
+    <div class="dashboard-heading">
+
+        <div>
+            <span>FARMER DASHBOARD</span>
+
+            <h1>
+                Welcome, Farmer 👋
+            </h1>
+
+            <p>
+                Manage your procurement journey from one place.
+            </p>
+        </div>
+
+        <a href="booking.html" class="btn primary-btn">
+            + New Booking
+        </a>
+
+    </div>
+
+
+    <!-- STAT CARDS -->
+
+    <section class="dashboard-stats">
+
+        <div class="stat-card">
+            <span>Upcoming Booking</span>
+            <strong>10:30 AM</strong>
+            <small>05 September 2026</small>
+        </div>
+
+        <div class="stat-card">
+            <span>Queue Position</span>
+            <strong>#08</strong>
+            <small>ABC Procurement Centre</small>
+        </div>
+
+        <div class="stat-card">
+            <span>Estimated Wait</span>
+            <strong>32 min</strong>
+            <small>Updated just now</small>
+        </div>
+
+        <div class="stat-card">
+            <span>Total Procured</span>
+            <strong>12,450 kg</strong>
+            <small>This season</small>
+        </div>
+
+    </section>
+
+
+    <!-- CURRENT BOOKING -->
+
+    <section class="dashboard-grid">
+
+        <div class="dashboard-card large-card">
+
+            <div class="card-title">
+
+                <div>
+                    <span>CURRENT BOOKING</span>
+                    <h2>ABC Procurement Centre</h2>
+                </div>
+
+                <span class="status success">
+                    CONFIRMED
+                </span>
+
+            </div>
+
+
+            <div class="booking-details">
+
+                <div>
+                    <small>Crop</small>
+                    <strong>Wheat</strong>
+                </div>
+
+                <div>
+                    <small>Quantity</small>
+                    <strong>2,500 kg</strong>
+                </div>
+
+                <div>
+                    <small>Slot</small>
+                    <strong>10:30 AM</strong>
+                </div>
+
+                <div>
+                    <small>Token</small>
+                    <strong>A-127</strong>
+                </div>
+
+            </div>
+
+
+            <div class="card-actions">
+
+                <a href="token.html" class="btn primary-btn">
+                    View Token
+                </a>
+
+                <a href="tracking.html" class="btn secondary-btn">
+                    Track Status
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- RECOMMENDATION -->
+
+        <div class="dashboard-card">
+
+            <span>AI RECOMMENDATION</span>
+
+            <h2>Best Centre</h2>
+
+            <div class="recommendation">
+
+                <h3>ABC Procurement Centre</h3>
+
+                <p>
+                    Based on your location, crop quantity
+                    and current queue.
+                </p>
+
+                <div class="recommendation-score">
+                    92% Match
+                </div>
+
+            </div>
+
+            <a href="centers.html">
+                View All Centres →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- QUICK ACTIONS -->
+
+    <section>
+
+        <div class="section-heading left">
+
+            <span>QUICK ACTIONS</span>
+
+            <h2>What would you like to do?</h2>
+
+        </div>
+
+
+        <div class="quick-actions">
+
+            <a href="booking.html">
+                📅
+                <strong>Book Slot</strong>
+                <span>Find the best slot</span>
+            </a>
+
+            <a href="centers.html">
+                📍
+                <strong>Find Centre</strong>
+                <span>Compare centres</span>
+            </a>
+
+            <a href="token.html">
+                🎫
+                <strong>My Token</strong>
+                <span>View queue position</span>
+            </a>
+
+            <a href="tracking.html">
+                📦
+                <strong>Track Procurement</strong>
+                <span>View current status</span>
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+</body>
+</html>
