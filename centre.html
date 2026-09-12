@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Procurement Centres | SmartProcure</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🌾 SmartProcure
+        </div>
+
+        <nav aria-label="Main Navigation">
+            <a href="index.html">Home</a>
+            <a href="farmer.html">Dashboard</a>
+            <a href="booking.html">Book Slot</a>
+            <a href="login.html">Login</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="page-container">
+
+        <!-- PAGE HEADING -->
+
+        <section class="page-heading">
+
+            <span>PROCUREMENT NETWORK</span>
+
+            <h1>Find a Procurement Centre</h1>
+
+            <p>
+                Compare procurement centres based on distance,
+                queue, available capacity and estimated waiting time.
+            </p>
+
+        </section>
+
+
+        <!-- ================= SEARCH ================= -->
+
+        <section class="search-box">
+
+            <label for="centre-search" class="sr-only">
+                Search Procurement Centre
+            </label>
+
+            <input
+                type="search"
+                id="centre-search"
+                name="centre-search"
+                placeholder="Search by centre, district or village..."
+            >
+
+            <label for="crop-select" class="sr-only">
+                Select Crop
+            </label>
+
+            <select id="crop-select" name="crop">
+
+                <option value="all">All Crops</option>
+                <option value="wheat">Wheat</option>
+                <option value="paddy">Paddy</option>
+                <option value="mustard">Mustard</option>
+                <option value="maize">Maize</option>
+
+            </select>
+
+            <button
+                type="button"
+                class="btn primary-btn"
+                id="search-btn"
+            >
+                Search
+            </button>
+
+        </section>
+
+
+        <!-- ================= PROCUREMENT CENTRES ================= -->
+
+        <section class="centre-grid" aria-label="Procurement Centres">
+
+
+            <!-- ===== CENTRE 1 ===== -->
+
+            <article class="centre-card recommended">
+
+                <div class="centre-top">
+
+                    <span class="recommended-label">
+                        ⭐ AI RECOMMENDED
+                    </span>
+
+                    <span class="status success">
+                        OPEN
+                    </span>
+
+                </div>
+
+                <h2>ABC Procurement Centre</h2>
+
+                <p>
+                    📍 Jaipur Rural, Rajasthan
+                </p>
+
+                <div class="centre-stats">
+
+                    <div>
+                        <strong>8.2 km</strong>
+                        <small>Distance</small>
+                    </div>
+
+                    <div>
+                        <strong>17</strong>
+                        <small>Queue</small>
+                    </div>
+
+                    <div>
+                        <strong>32 min</strong>
+                        <small>Wait</small>
+                    </div>
+
+                    <div>
+                        <strong>72%</strong>
+                        <small>Capacity</small>
+                    </div>
+
+                </div>
+
+                <div
+                    class="progress"
+                    role="progressbar"
+                    aria-valuenow="72"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-label="Centre capacity: 72%"
+                >
+                    <div style="width: 72%;"></div>
+                </div>
+
+                <p class="centre-note">
+                    Best match for your quantity and location.
+                </p>
+
+                <div class="card-actions">
+
+                    <a href="booking.html" class="btn primary-btn">
+                        Select Centre
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- ===== CENTRE 2 ===== -->
+
+            <article class="centre-card">
+
+                <div class="centre-top">
+
+                    <span></span>
+
+                    <span class="status success">
+                        OPEN
+                    </span>
+
+                </div>
+
+                <h2>Green Valley Centre</h2>
+
+                <p>
+                    📍 Sanganer, Rajasthan
+                </p>
+
+                <div class="centre-stats">
+
+                    <div>
+                        <strong>13.4 km</strong>
+                        <small>Distance</small>
+                    </div>
+
+                    <div>
+                        <strong>6</strong>
+                        <small>Queue</small>
+                    </div>
+
+                    <div>
+                        <strong>20 min</strong>
+                        <small>Wait</small>
+                    </div>
+
+                    <div>
+                        <strong>41%</strong>
+                        <small>Capacity</small>
+                    </div>
+
+                </div>
+
+                <div
+                    class="progress"
+                    role="progressbar"
+                    aria-valuenow="41"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-label="Centre capacity: 41%"
+                >
+                    <div style="width: 41%;"></div>
+                </div>
+
+                <div class="card-actions">
+
+                    <a href="booking.html" class="btn primary-btn">
+                        Select Centre
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- ===== CENTRE 3 ===== -->
+
+            <article class="centre-card">
+
+                <div class="centre-top">
+
+                    <span></span>
+
+                    <span class="status warning">
+                        BUSY
+                    </span>
+
+                </div>
+
+                <h2>Farmers Hub Centre</h2>
+
+                <p>
+                    📍 Chomu, Rajasthan
+                </p>
+
+                <div class="centre-stats">
+
+                    <div>
+                        <strong>18.7 km</strong>
+                        <small>Distance</small>
+                    </div>
+
+                    <div>
+                        <strong>31</strong>
+                        <small>Queue</small>
+                    </div>
+
+                    <div>
+                        <strong>1h 24m</strong>
+                        <small>Wait</small>
+                    </div>
+
+                    <div>
+                        <strong>91%</strong>
+                        <small>Capacity</small>
+                    </div>
+
+                </div>
+
+                <div
+                    class="progress"
+                    role="progressbar"
+                    aria-valuenow="91"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-label="Centre capacity: 91%"
+                >
+                    <div style="width: 91%;"></div>
+                </div>
+
+                <div class="card-actions">
+
+                    <a href="booking.html" class="btn secondary-btn">
+                        View Centre
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 SmartProcure • SIH26032
+        </p>
+
+    </footer>
+
+
+    <!-- ================= SEARCH SCRIPT ================= -->
+
+    <script>
+
+        const searchInput = document.getElementById("centre-search");
+        const cropSelect = document.getElementById("crop-select");
+        const searchButton = document.getElementById("search-btn");
+
+        const centreCards = document.querySelectorAll(".centre-card");
+
+        searchButton.addEventListener("click", function () {
+
+            const searchText =
+                searchInput.value.toLowerCase().trim();
+
+            const selectedCrop =
+                cropSelect.value.toLowerCase();
+
+            centreCards.forEach(function (card) {
+
+                const cardText =
+                    card.innerText.toLowerCase();
+
+                const matchesSearch =
+                    cardText.includes(searchText);
+
+                /*
+                    Crop filtering will become useful
+                    when crop data is added to each centre.
+                */
+
+                const matchesCrop =
+                    selectedCrop === "all" ||
+                    cardText.includes(selectedCrop);
+
+                if (matchesSearch && matchesCrop) {
+
+                    card.style.display = "";
+
+                } else {
+
+                    card.style.display = "none";
+
+                }
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
