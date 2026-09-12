@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Slot | SmartProcure</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">🌾 SmartProcure</div>
+
+    <nav>
+        <a href="farmer.html">Dashboard</a>
+        <a href="centre.html">Centres</a>
+        <a href="tracking.html">Track</a>
+    </nav>
+
+</header>
+
+
+<main class="booking-page">
+
+    <section class="page-heading">
+
+        <span>SMART BOOKING</span>
+
+        <h1>Find Your Best Procurement Slot</h1>
+
+        <p>
+            Enter your procurement details and let SmartProcure
+            recommend the best centre and time.
+        </p>
+
+    </section>
+
+
+    <div class="booking-layout">
+
+
+        <!-- FORM -->
+
+        <section class="booking-form card">
+
+            <h2>Procurement Details</h2>
+
+            <p class="muted">
+                Tell us about your crop.
+            </p>
+
+
+            <form>
+
+                <div class="form-group">
+
+                    <label for="crop">
+                        Crop
+                    </label>
+
+                    <select id="crop">
+
+                        <option value="">
+                            Select Crop
+                        </option>
+
+                        <option>Wheat</option>
+                        <option>Paddy</option>
+                        <option>Mustard</option>
+                        <option>Maize</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="quantity">
+                        Quantity (kg)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="quantity"
+                        placeholder="Example: 2500"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="date">
+                        Preferred Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="date"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="location">
+                        Your Location
+                    </label>
+
+                    <input
+                        type="text"
+                        id="location"
+                        placeholder="Enter village / location"
+                    >
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="btn primary-btn full-btn"
+                    onclick="showRecommendation()"
+                >
+                    🤖 Find Best Option
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- RECOMMENDATION -->
+
+        <section
+            id="recommendation"
+            class="recommendation-panel card"
+        >
+
+            <span>AI RECOMMENDATION</span>
+
+            <h2>Recommended for You</h2>
+
+            <div class="recommendation-main">
+
+                <h3>
+                    ABC Procurement Centre
+                </h3>
+
+                <p>
+                    📍 8.2 km from your location
+                </p>
+
+            </div>
+
+
+            <div class="recommendation-stats">
+
+                <div>
+                    <strong>32 min</strong>
+                    <small>Estimated Wait</small>
+                </div>
+
+                <div>
+                    <strong>10:30 AM</strong>
+                    <small>Recommended Slot</small>
+                </div>
+
+                <div>
+                    <strong>72%</strong>
+                    <small>Capacity</small>
+                </div>
+
+            </div>
+
+
+            <div class="recommendation-reasons">
+
+                <h3>Why this recommendation?</h3>
+
+                <p>✓ Shorter estimated waiting time</p>
+                <p>✓ Centre has sufficient capacity</p>
+                <p>✓ Suitable for your crop quantity</p>
+                <p>✓ Reasonable distance</p>
+
+            </div>
+
+
+            <a
+                href="token.html"
+                class="btn primary-btn full-btn"
+            >
+                Confirm Booking
+            </a>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<script>
+
+function showRecommendation() {
+
+    const panel = document.getElementById("recommendation");
+
+    panel.classList.add("show");
+
+    panel.scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
+
+</script>
+
+
+</body>
+</html>
