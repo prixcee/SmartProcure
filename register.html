@@ -1,0 +1,446 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register | SmartProcure</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body class="auth-page">
+
+<header class="navbar">
+
+    <div class="logo">🌾 SmartProcure</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+    </nav>
+
+</header>
+
+
+<main class="auth-container">
+
+    <div class="register-card">
+
+        <div class="auth-header">
+
+            <span class="badge">
+                FARMER REGISTRATION
+            </span>
+
+            <h1>Create Account</h1>
+
+            <p>
+                Register to access smart procurement services.
+            </p>
+
+        </div>
+
+
+        <form id="registrationForm">
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter full name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="farmer-id">
+                        Farmer ID
+                    </label>
+
+                    <input
+                        type="text"
+                        id="farmer-id"
+                        name="farmerId"
+                        placeholder="Enter farmer ID"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="mobile">
+                        Mobile Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="mobile"
+                        name="mobile"
+                        placeholder="Enter mobile number"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter email"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="state">
+                        State
+                    </label>
+
+                    <select id="state" name="state" required>
+
+                        <option value="">
+                            Select State
+                        </option>
+
+                        <option value="Rajasthan">
+                            Rajasthan
+                        </option>
+
+                        <option value="Bihar">
+                            Bihar
+                        </option>
+
+                        <option value="Uttar Pradesh">
+                            Uttar Pradesh
+                        </option>
+
+                        <option value="Haryana">
+                            Haryana
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="district">
+                        District
+                    </label>
+
+                    <input
+                        type="text"
+                        id="district"
+                        name="district"
+                        placeholder="Enter district"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="village">
+                    Village
+                </label>
+
+                <input
+                    type="text"
+                    id="village"
+                    name="village"
+                    placeholder="Enter village"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Create password"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="confirm-password">
+                        Confirm Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirm-password"
+                        name="confirmPassword"
+                        placeholder="Confirm password"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <label class="terms">
+
+                <input
+                    type="checkbox"
+                    id="terms"
+                    name="terms"
+                    required
+                >
+
+                I agree to the terms and conditions.
+
+            </label>
+
+
+            <button
+                type="submit"
+                class="btn primary-btn full-btn"
+                id="registerButton"
+            >
+                Create Account
+            </button>
+
+        </form>
+
+
+        <div class="auth-footer">
+
+            <p>
+                Already have an account?
+                <a href="login.html">Login</a>
+            </p>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 SmartProcure • SIH26032
+    </p>
+
+</footer>
+
+
+<script>
+
+const registrationForm =
+    document.getElementById("registrationForm");
+
+const registerButton =
+    document.getElementById("registerButton");
+
+
+registrationForm.addEventListener("submit", async function(event) {
+
+    event.preventDefault();
+
+    // Get values
+    const name =
+        document.getElementById("name").value.trim();
+
+    const farmerId =
+        document.getElementById("farmer-id").value.trim();
+
+    const mobile =
+        document.getElementById("mobile").value.trim();
+
+    const email =
+        document.getElementById("email").value.trim();
+
+    const state =
+        document.getElementById("state").value;
+
+    const district =
+        document.getElementById("district").value.trim();
+
+    const village =
+        document.getElementById("village").value.trim();
+
+    const password =
+        document.getElementById("password").value;
+
+    const confirmPassword =
+        document.getElementById("confirm-password").value;
+
+
+    // Password validation
+    if (password !== confirmPassword) {
+
+        alert("Passwords do not match!");
+
+        return;
+    }
+
+
+    // Create farmer object
+    const farmerData = {
+
+        name: name,
+
+        farmerId: farmerId,
+
+        mobile: mobile,
+
+        email: email,
+
+        state: state,
+
+        district: district,
+
+        village: village,
+
+        password: password
+
+    };
+
+
+    console.log(
+        "Sending farmer data:",
+        farmerData
+    );
+
+
+    try {
+
+        registerButton.disabled = true;
+
+        registerButton.textContent =
+            "Registering...";
+
+
+        const response = await fetch(
+            "http://127.0.0.1:3000/api/register",
+            {
+
+                method: "POST",
+
+                headers: {
+
+                    "Content-Type":
+                        "application/json"
+
+                },
+
+                body:
+                    JSON.stringify(farmerData)
+
+            }
+        );
+
+
+        const result =
+            await response.json();
+
+
+        console.log(
+            "Server response:",
+            result
+        );
+
+
+        if (response.ok) {
+
+            alert(
+                "✅ " + result.message
+            );
+
+            registrationForm.reset();
+
+        } else {
+
+            alert(
+                "❌ " +
+                (result.message ||
+                "Registration failed.")
+            );
+
+        }
+
+    }
+
+    catch (error) {
+
+        console.error(
+            "Registration Error:",
+            error
+        );
+
+        alert(
+            "❌ Unable to connect to SmartProcure server."
+        );
+
+    }
+
+    finally {
+
+        registerButton.disabled = false;
+
+        registerButton.textContent =
+            "Create Account";
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
