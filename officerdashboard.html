@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centre Officer Dashboard | SmartProcure</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+<header class="dashboard-nav">
+
+    <div class="logo">🌾 SmartProcure</div>
+
+    <nav>
+        <a href="officerdashboard.html">Dashboard</a>
+        <a href="centre.html">Centre</a>
+        <a href="index.html">Logout</a>
+    </nav>
+
+</header>
+
+
+<main class="dashboard">
+
+    <div class="dashboard-heading">
+
+        <div>
+
+            <span>CENTRE OPERATOR</span>
+
+            <h1>
+                ABC Procurement Centre
+            </h1>
+
+            <p>
+                Manage today's procurement queue.
+            </p>
+
+        </div>
+
+
+        <span class="status success">
+            CENTRE OPEN
+        </span>
+
+    </div>
+
+
+    <!-- STATS -->
+
+    <section class="dashboard-stats">
+
+        <div class="stat-card">
+            <span>Current Token</span>
+            <strong>A-119</strong>
+            <small>Being processed</small>
+        </div>
+
+        <div class="stat-card">
+            <span>Waiting Farmers</span>
+            <strong>17</strong>
+            <small>In queue</small>
+        </div>
+
+        <div class="stat-card">
+            <span>Completed Today</span>
+            <strong>42</strong>
+            <small>Since 8:00 AM</small>
+        </div>
+
+        <div class="stat-card">
+            <span>Capacity</span>
+            <strong>72%</strong>
+            <small>Current utilization</small>
+        </div>
+
+    </section>
+
+
+    <section class="dashboard-grid">
+
+
+        <!-- CURRENT FARMER -->
+
+        <div class="dashboard-card large-card">
+
+            <div class="card-title">
+
+                <div>
+
+                    <span>NOW SERVING</span>
+
+                    <h2>Token A-119</h2>
+
+                </div>
+
+                <span class="status warning">
+                    PROCESSING
+                </span>
+
+            </div>
+
+
+            <div class="farmer-processing">
+
+                <div>
+                    <small>Farmer</small>
+                    <strong>Demo Farmer</strong>
+                </div>
+
+                <div>
+                    <small>Crop</small>
+                    <strong>Wheat</strong>
+                </div>
+
+                <div>
+                    <small>Quantity</small>
+                    <strong>2,500 kg</strong>
+                </div>
+
+            </div>
+
+
+            <div class="card-actions">
+
+                <button class="btn primary-btn">
+                    Mark Completed
+                </button>
+
+                <button class="btn secondary-btn">
+                    Hold
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUEUE -->
+
+        <div class="dashboard-card">
+
+            <span>LIVE QUEUE</span>
+
+            <h2>Next Farmers</h2>
+
+
+            <div class="mini-queue">
+
+                <div>
+                    <strong>A-120</strong>
+                    <span>Wheat • 1800 kg</span>
+                </div>
+
+                <div>
+                    <strong>A-121</strong>
+                    <span>Paddy • 2200 kg</span>
+                </div>
+
+                <div>
+                    <strong>A-122</strong>
+                    <span>Wheat • 3100 kg</span>
+                </div>
+
+                <div>
+                    <strong>A-123</strong>
+                    <span>Mustard • 1400 kg</span>
+                </div>
+
+                <div>
+                    <strong>A-124</strong>
+                    <span>Wheat • 2700 kg</span>
+                </div>
+
+            </div>
+
+
+            <button class="btn primary-btn full-btn">
+                Call Next Farmer
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- QUEUE TABLE -->
+
+    <section class="dashboard-card">
+
+        <div class="card-title">
+
+            <div>
+
+                <span>TODAY'S QUEUE</span>
+
+                <h2>Procurement Queue</h2>
+
+            </div>
+
+            <button class="btn secondary-btn">
+                Refresh
+            </button>
+
+        </div>
+
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Token</th>
+                        <th>Farmer</th>
+                        <th>Crop</th>
+                        <th>Quantity</th>
+                        <th>Slot</th>
+                        <th>Status</th>
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr>
+                        <td>A-119</td>
+                        <td>Demo Farmer</td>
+                        <td>Wheat</td>
+                        <td>2500 kg</td>
+                        <td>10:15 AM</td>
+                        <td>
+                            <span class="status warning">
+                                Processing
+                            </span>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>A-120</td>
+                        <td>Farmer 02</td>
+                        <td>Wheat</td>
+                        <td>1800 kg</td>
+                        <td>10:30 AM</td>
+                        <td>
+                            <span class="status">
+                                Waiting
+                            </span>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>A-121</td>
+                        <td>Farmer 03</td>
+                        <td>Paddy</td>
+                        <td>2200 kg</td>
+                        <td>10:45 AM</td>
+                        <td>
+                            <span class="status">
+                                Waiting
+                            </span>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>A-118</td>
+                        <td>Farmer 04</td>
+                        <td>Mustard</td>
+                        <td>1500 kg</td>
+                        <td>10:00 AM</td>
+                        <td>
+                            <span class="status success">
+                                Completed
+                            </span>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTROL -->
+
+    <section class="centre-controls">
+
+        <button class="btn secondary-btn">
+            ⏸ Pause Queue
+        </button>
+
+        <button class="btn secondary-btn">
+            🔄 Recalculate Waiting Time
+        </button>
+
+        <button class="btn secondary-btn">
+            📊 View Analytics
+        </button>
+
+    </section>
+
+</main>
+
+</body>
+</html>
